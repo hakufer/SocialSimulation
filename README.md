@@ -32,3 +32,39 @@ El objetivo del programa es simular múltiples rondas de enfrentamientos de Pied
    - Al final de las rondas, se determina el jugador con el puntaje más alto. Si hay empate, se declara empate entre los jugadores líderes.
 
 ---
+# Ejercicio 2: Torneo de Rock, Paper, Scissors, Lizard, Spock
+
+Este programa extiende las reglas clásicas de Piedra, Papel o Tijera, añadiendo dos nuevas opciones: **Lizard** y **Spock**, lo que crea un juego más variado y emocionante. Este torneo simula múltiples rondas entre varios jugadores, determinando el ganador según los puntajes acumulados.
+
+---
+
+## Descripción del Programa
+
+### Objetivo
+
+Simular un torneo de múltiples rondas en el que los jugadores seleccionan estrategias aleatorias entre las cinco opciones: `Rock`, `Paper`, `Scissors`, `Lizard`, `Spock`. El programa evalúa los enfrentamientos entre pares y actualiza los puntajes en función de las reglas del juego.
+
+### Funcionalidades principales
+
+1. **Definir estrategias y reglas del juego**:
+   - Estrategias disponibles: `Rock`, `Paper`, `Scissors`, `Lizard`, `Spock`.
+   - Las reglas de victoria están definidas mediante un diccionario (`payoff`) que evalúa todas las combinaciones posibles:
+     - `Rock` aplasta a `Scissors` y aplasta a `Lizard`, pero pierde contra `Paper` y `Spock`.
+     - `Paper` cubre a `Rock` y desautoriza a `Spock`, pero pierde contra `Scissors` y `Lizard`.
+     - `Scissors` corta `Paper` y decapita a `Lizard`, pero pierde contra `Rock` y `Spock`.
+     - `Lizard` envenena `Spock` y come `Paper`, pero pierde contra `Rock` y `Scissors`.
+     - `Spock` rompe `Scissors` y vaporiza `Rock`, pero pierde contra `Paper` y `Lizard`.
+
+2. **Definir a los jugadores**:
+   - Los participantes incluyen: `Jim`, `Jane`, `Peter`, `Zoe`, `Sam`, `Alice`, `Bob`, `Charlie`, `Dana` y `Eve`.
+   - Cada jugador tiene un puntaje inicial de 0 y selecciona estrategias de forma aleatoria durante cada enfrentamiento.
+
+3. **Simulación del Torneo**:
+   - El torneo consta de 5 rondas, donde los jugadores se enfrentan en todos los pares posibles en cada ronda.
+   - Los puntajes se actualizan dinámicamente en función de los resultados de cada enfrentamiento.
+
+4. **Determinación del Ganador**:
+   - Al final de las rondas, se identifica al jugador con el puntaje más alto como ganador.
+   - Si hay un empate, todos los jugadores líderes comparten la victoria.
+
+---
