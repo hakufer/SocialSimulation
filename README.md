@@ -68,3 +68,42 @@ Simular un torneo de múltiples rondas en el que los jugadores seleccionan estra
    - Si hay un empate, todos los jugadores líderes comparten la victoria.
 
 ---
+
+# Ejercicio 3: Torneo de Piedra, Papel o Tijera usando Clases en Python
+
+Este programa implementa un torneo de **Piedra, Papel o Tijera** utilizando un diseño basado en clases en Python. Cada jugador es representado como una instancia de la clase `Player`, y el torneo es gestionado por la clase `Game`.
+
+---
+
+## Descripción del Programa
+
+### Objetivo
+
+Simular un torneo de múltiples rondas de Piedra, Papel o Tijera entre varios jugadores, utilizando un diseño orientado a objetos (OOP). El programa selecciona estrategias aleatorias para cada jugador, evalúa los resultados de cada enfrentamiento y determina un ganador basado en los puntajes acumulados.
+
+### Estructura del Código
+
+1. **Clase `Player`**:
+   - Representa a cada jugador en el torneo.
+   - Atributos:
+     - `name`: Nombre del jugador.
+     - `score`: Puntaje acumulado.
+     - `strategy`: Estrategia seleccionada.
+   - Métodos:
+     - `get_strategy`: Selecciona una estrategia aleatoria (`Rock`, `Paper`, `Scissors`).
+     - `increase_score`: Actualiza el puntaje del jugador.
+
+2. **Clase `Game`**:
+   - Gestiona el torneo y realiza los enfrentamientos.
+   - Atributos:
+     - `players`: Lista de jugadores.
+   - Métodos:
+     - `play_round`: Simula un enfrentamiento entre dos jugadores, actualizando sus puntajes.
+     - `play_game`: Ejecuta varias rondas del torneo y gestiona los enfrentamientos entre todos los jugadores.
+     - `declare_winner`: Determina y muestra el ganador con el puntaje más alto.
+
+3. **Diccionario `payoff`**:
+   - Define las reglas del juego y los resultados para cada combinación de estrategias:
+     - `Rock` gana a `Scissors`, pero pierde contra `Paper`.
+     - `Paper` gana a `Rock`, pero pierde contra `Scissors`.
+     - `Scissors` gana a `Paper`, pero pierde contra `Rock`.
