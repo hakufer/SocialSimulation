@@ -2,28 +2,33 @@
 
 # Ejercicio 1: Torneo de Piedra, Papel o Tijera
 
-Este programa simula un torneo de **Piedra, Papel o Tijera** entre cuatro jugadores. Cada enfrentamiento sigue las reglas estándar del juego, y los puntajes se acumulan para determinar al ganador final. En este ejemplo, el torneo culminó con **Jane** como ganadora.
+Este programa simula un torneo de **Piedra, Papel o Tijera** entre varios jugadores. Cada enfrentamiento sigue las reglas estándar del juego, y los puntajes se acumulan para determinar al ganador final. El programa incluye una simulación que genera resultados dinámicos dependiendo de las estrategias seleccionadas aleatoriamente por los jugadores.
 
 ---
 
 ## Descripción del Programa
 
-El programa realiza las siguientes acciones principales:
+### Objetivo
 
-1. **Definir estrategias y reglas de juego**:
+El objetivo del programa es simular múltiples rondas de enfrentamientos de Piedra, Papel o Tijera entre varios jugadores. Los resultados se calculan de acuerdo con las reglas del juego y se lleva un seguimiento de los puntajes para determinar al ganador o posibles empates al final del torneo.
+
+### Funcionalidades principales
+
+1. **Definir estrategias y reglas del juego**:
    - Estrategias disponibles: `Rock`, `Paper`, `Scissors`.
-   - Las reglas de victoria están definidas mediante un diccionario (`payoff`) que indica el resultado de cada combinación posible.
+   - Las reglas de victoria están definidas mediante un diccionario (`payoff`) que evalúa cada combinación posible:
+     - `Rock` gana a `Scissors`, pero pierde contra `Paper`.
+     - `Paper` gana a `Rock`, pero pierde contra `Scissors`.
+     - `Scissors` gana a `Paper`, pero pierde contra `Rock`.
 
 2. **Definir a los jugadores**:
-   - Los participantes del torneo son: `Jim`, `Jane`, `Peter` y `Zoe`.
-   - Cada jugador tiene un puntaje inicial de 0 y selecciona estrategias aleatorias en cada enfrentamiento.
+   - Los jugadores son definidos en una lista con sus respectivos nombres, puntajes iniciales y estrategias (que se seleccionan aleatoriamente durante el juego).
 
 3. **Simulación del Torneo**:
-   - El torneo consta de 5 rondas.
-   - En cada ronda, los jugadores se enfrentan en pares. El ganador de cada enfrentamiento obtiene 1 punto y el perdedor 0. En caso de empate, ambos reciben 0 puntos.
-   - Los puntajes se actualizan dinámicamente y se muestran al final de cada ronda.
+   - El torneo consta de un número de rondas predefinido (en este caso, 5).
+   - Cada ronda implica múltiples enfrentamientos entre pares de jugadores. Los puntajes se actualizan dinámicamente en función de los resultados.
 
-4. **Resultados Finales**:
-   - Al finalizar las rondas, se determina el jugador con el mayor puntaje acumulado como ganador. Si hay un empate en el puntaje más alto, todos los jugadores empatados comparten la victoria. En este caso, la ganadora fue Jane con 7 puntos
+4. **Determinación del ganador**:
+   - Al final de las rondas, se determina el jugador con el puntaje más alto. Si hay empate, se declara empate entre los jugadores líderes.
 
 ---
