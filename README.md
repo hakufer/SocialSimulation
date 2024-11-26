@@ -1,5 +1,7 @@
 # SocialSimulation
 
+Link: https://hakufer.github.io/SocialSimulation/
+
 # Ejercicio 1: Torneo de Piedra, Papel o Tijera
 
 Este programa simula un torneo de **Piedra, Papel o Tijera** entre varios jugadores. Cada enfrentamiento sigue las reglas estándar del juego, y los puntajes se acumulan para determinar al ganador final. El programa incluye una simulación que genera resultados dinámicos dependiendo de las estrategias seleccionadas aleatoriamente por los jugadores.
